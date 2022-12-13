@@ -27,8 +27,7 @@ HEADERS = {
         "description": "The calculated error rate, as determined by a PhiX spike-in",
         "min": 0,
         "max": 100,
-        "suffix": "%",
-        "format": "{:,.0f}",  # No decimal places please
+        "suffix": "%"
     },
     "Error Rate 35": {
         "title": "Error Rate 35 Cycles (%)",
@@ -36,8 +35,7 @@ HEADERS = {
         "min": 0,
         "max": 100,
         "suffix": "%",
-        "format": "{:,.0f}",  # No decimal places please
-        "hidden": True,
+        "hidden": True
     },
     "Error Rate 50": {
         "title": "Error Rate 35 Cycles (%)",
@@ -45,8 +43,7 @@ HEADERS = {
         "min": 0,
         "max": 100,
         "suffix": "%",
-        "format": "{:,.0f}",  # No decimal places please
-        "hidden": True,
+        "hidden": True
     },
     "Error Rate 75": {
         "title": "Error Rate 35 Cycles (%)",
@@ -54,7 +51,6 @@ HEADERS = {
         "min": 0,
         "max": 100,
         "suffix": "%",
-        "format": "{:,.0f}",  # No decimal places please
         "hidden": True,
     },
     "Error Rate 100": {
@@ -63,7 +59,6 @@ HEADERS = {
         "min": 0,
         "max": 100,
         "suffix": "%",
-        "format": "{:,.0f}",  # No decimal places please
         "hidden": True,
     },
     "First Cycle Intensity": {
@@ -76,7 +71,6 @@ HEADERS = {
         "suffix": "%",
         "min": 0,
         "max": 100,
-        "format": "{:,.0f}",  # No decimal places please
     },
     "% >= Q30": {
         "title": "% >= Q30",
@@ -84,19 +78,16 @@ HEADERS = {
         "min": 0,
         "max": 100,
         "suffix": "%",
-        "format": "{:,.0f}",  # No decimal places please
     },
     "% Occupancy Proxy": {
         "title": "Occupancy Proxy (%)",
         # "description": "",
         "suffix": "%",
-        "format": "{:,.0f}",  # No decimal places please
     },
     "% Occupied": {
         "title": "Occupied (%)",
         "description": "The percentage of nanowells occupied by clusters, +/- 1 standard deviation.",
         "suffix": "%",
-        "format": "{:,.0f}",  # No decimal places please
     },
     "Projected Yield G": {
         "title": "Projected Yield ({})".format(config.base_count_prefix),
@@ -133,7 +124,6 @@ HEADERS = {
         "min": 0,
         "max": 100,
         "suffix": "%",
-        "format": "{:,.0f}",  # No decimal places please
     },
     "Density": {
         "title": "Density",
@@ -190,33 +180,28 @@ HEADERS = {
         "title": "{} PF Reads".format(config.read_count_prefix),
         "description": "The total number of passing filter reads for this lane ({})".format(config.read_count_desc),
         "modify": lambda x: float(x) * config.read_count_multiplier,
-        "format": "{:,.2f}",
         "shared_key": "read_count",
     },
     "Total Reads": {
         "title": "{} Reads".format(config.read_count_prefix),
         "description": "The total number of reads for this lane ({})".format(config.read_count_desc),
         "modify": lambda x: float(x) * config.read_count_multiplier,
-        "format": "{:,.2f}",
         "shared_key": "read_count",
     },
     "Mapped Reads Cv": {
         "title": "CV",
         "description": "The coefficient of variation for the number of counts across all indexes.",
-        "format": "{:,.2f}",  # 2 decimal places please
     },
     "Max Mapped Reads": {
         "title": "{} Max Mapped Reads".format(config.read_count_prefix),
         "description": "The highest representation for any index ({})".format(config.read_count_desc),
         "modify": lambda x: float(x) * config.read_count_multiplier,
-        "format": "{:,.2f}",
         "shared_key": "read_count",
     },
     "Min Mapped Reads": {
         "title": "{} Min Mapped Reads".format(config.read_count_prefix),
         "description": "The lowest representation for any index ({})".format(config.read_count_desc),
         "modify": lambda x: float(x) * config.read_count_multiplier,
-        "format": "{:,.2f}",
         "shared_key": "read_count",
     },
     "Total Fraction Mapped Reads": {"hidden": True},
